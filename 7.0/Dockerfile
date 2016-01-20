@@ -1,4 +1,4 @@
-FROM orukami/alpine-php
+FROM orukami/alpine-php:7
 
 ENV WWW_ROOT /srv/www
 ENV PUBLIC_ROOT /srv/www/public
@@ -18,4 +18,5 @@ WORKDIR ${WWW_ROOT}
 EXPOSE 80 443
 
 ENTRYPOINT ["/entrypoint.sh"]
+
 CMD ["/usr/bin/supervisord"]
